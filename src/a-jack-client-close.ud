@@ -1,0 +1,23 @@
+(section
+  (ref "jack_client_close")
+  (title "Jack.Client.Close")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+procedure Close
+  (Client : in     Client_t;
+   Failed :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Close") " procedure disconnects a client
+      from a JACK server. On failure, the procedure
+      sets " (item parameter "Failed") " to " (item constant "True") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Close") " procedure is equivalent to "
+      (item c_function "jack_client_close") ".")))

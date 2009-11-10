@@ -2,8 +2,11 @@
   (ref "jack_client")
   (title "Jack.Client API reference")
 
-  (include "a-jack-client-open.ud")
   (include "a-jack-client-activate.ud")
+  (include "a-jack-client-close.ud")
+  (include "a-jack-client-connect.ud")
+  (include "a-jack-client-disconnect.ud")
   (include "a-jack-client-get_ports.ud")
+  (include "a-jack-client-open.ud")
   (include "a-jack-client-port_register.ud")
 )

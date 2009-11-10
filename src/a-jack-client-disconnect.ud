@@ -1,0 +1,25 @@
+(section
+  (ref "jack_client_disconnect")
+  (title "Jack.Client.Disconnect")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+procedure Disconnect
+  (Client           : in     Client_t;
+   Source_Port      : in     Port_Name_t;
+   Destination_Port : in     Port_Name_t;
+   Failed           :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Disconnect") " procedure removes a connection
+      between two ports. On failure, the procedure
+      sets " (item parameter "Failed") " to " (item constant "True") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Disconnect") " procedure is equivalent to "
+      (item c_function "jack_disconnect") ".")))
