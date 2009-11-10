@@ -1,0 +1,34 @@
+
+#!/bin/sh
+
+info()
+{
+  echo "pkg-meta: info: $1" 1>&2
+}
+
+fatal()
+{
+  echo "pkg-meta: fatal: $1" 1>&2
+  exit 112
+}
+
+PKG_NAME=`./pkg-name meta/pkg` || fatal "could not read meta/pkg"
+
+info "mkdir release/meta"
+mkdir release/meta || fatal "could not create release/meta"
+
+info "copy meta/id release/meta/id"
+cp meta/id release/meta/id ||
+  die "could not copy meta/id release/meta/id"
+
+info "copy meta/title_full release/meta/title_full"
+cp meta/title_full release/meta/title_full ||
+  die "could not copy meta/title_full release/meta/title_full"
+
+info "copy meta/pkg release/meta/package"
+cp meta/pkg release/meta/package ||
+  die "could not copy meta/pkg release/meta/package"
+
+info "create release/meta/pubdate"
+date -u "+%Y-%m-%d %H:%M:%S %z" > release/meta/pubdate ||
+  die "could not create release/meta/pubdate"

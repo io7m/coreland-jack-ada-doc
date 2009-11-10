@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ $# -ne 2 ]
+then
+  echo "mk-html-header: usage: site-file title-file" 1>&2
+  exit 111
+fi
+
+site=`head -n 1 "$1"` || exit 1
+title=`head -n 1 "$2"` || exit 1
+cat <<EOF
+<div class="core_header">
+  <a href="/">${site}</a> / <a href="/doc">doc</a> - ${title}
+  <hr />
+</div>
+EOF

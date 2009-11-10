@@ -1,0 +1,42 @@
+#!/bin/sh
+
+info()
+{
+  echo "pkg-make: info: $1" 1>&2
+}
+
+fatal()
+{
+  echo "pkg-make: fatal: $1" 1>&2
+  exit 112
+}
+
+PKG_NAME=`./pkg-name meta/pkg` || fatal "could not read meta/pkg"
+
+info "copy LICENSE release"
+cp LICENSE release || fatal "could not copy LICENSE"
+
+info "link release ${PKG_NAME}"
+ln -s release "${PKG_NAME}"     || fatal "could not link ${PKG_NAME}"
+info "link 0.html release/index.html"
+ln -s 0.html release/index.html || fatal "could not link release/index.html"
+
+info "remove execute permissions"
+find release/ -type f -exec chmod 644 {} \; || die "failed to set permissions"
+info "fix directory permissions"
+find release/ -type d -exec chmod 755 {} \; || die "failed to set permissions"
+
+info "pack ${PKG_NAME}.tar.gz"
+tar -c -H -f - "${PKG_NAME}" | gzip -9 > "${PKG_NAME}.tar.gz" ||
+  fatal "could not create ${PKG_NAME}.tar.gz"
+
+info "md5 ${PKG_NAME}.tar.gz"
+md5 "${PKG_NAME}.tar.gz"    > "${PKG_NAME}.tar.gz.md5" ||
+  fatal "could not take md5 checksum"
+
+info "sha256 ${PKG_NAME}.tar.gz"
+sha256 "${PKG_NAME}.tar.gz" > "${PKG_NAME}.tar.gz.sha256" ||
+  fatal "could not take sha256 checksum"
+
+info "remove ${PKG_NAME}"
+rm -f "${PKG_NAME}" || die "could not remove ${PKG_NAME}"

@@ -1,0 +1,196 @@
+(section
+  (title "Install")
+
+  ; config section
+
+  (subsection
+    (title "Configuration")
+    (para
+      "On installation, binaries, source files, libraries and
+       headers are installed into various locations. The locations
+       can be customised by editing single-line configuration files.
+       The defaults are as follows:")
+    (para
+      (table install_config
+        (t-row
+          (item "Default path")
+          (item "Configuration file")
+          (item "Description"))
+        (t-row
+          (item file_name "/usr/local/share/coreland/jack-ada-repos")
+          (item file_name "conf-repos")
+          (item "Source code repository."))
+        (t-row
+          (item file_name "/usr/local/lib/coreland/jack-ada-static")
+          (item file_name "conf-slibdir")
+          (item "Static library directory."))
+        (t-row
+          (item file_name "/usr/local/lib/coreland/jack-ada")
+          (item file_name "conf-dlibdir")
+          (item "Dynamic library directory."))
+        (t-row
+          (item file_name "/usr/local/include/coreland/jack-ada")
+          (item file_name "conf-incdir")
+          (item "Header file directory."))
+        (t-row
+          (item file_name "/usr/local/bin")
+          (item file_name "conf-bindir")
+          (item "Executable directory."))
+        (t-row
+          (item file_name " ")
+          (item file_name "conf-fakeroot")
+          (item "Fake root directory (see below)."))))
+      (para
+        "For reasons of reliability, the compilation process does not
+         read the environment or, for example, attempt to detect which
+         compiler tools should be used to compile code. The compilation
+         process reads a series of single-line configuration files which
+         specify various options. The defaults provided are acceptable
+         for most systems but users wanting customised builds will need
+         to edit the following:")
+      (subsection
+        (title "C compiler configuration")
+        (table install_config
+          (t-row
+            (item "Configuration file")
+            (item "Description")
+            (item "Default value"))
+          (t-row
+            (item file_name "conf-cc")
+            (item "C compiler used to compile C code to object files")
+            (item command "cc"))
+          (t-row
+            (item file_name "conf-ld")
+            (item "C linker used to link C object files into executables")
+            (item command "cc"))
+          (t-row
+            (item file_name "conf-cflags")
+            (item "Optional flags passed to C compiler")
+            (item parameter "-O"))
+          (t-row
+            (item file_name "conf-ldflags")
+            (item "Optional flags passed to C linker")
+            (item parameter " "))
+          (t-row
+            (item file_name "conf-ldflags")
+            (item "Optional flags passed to C linker")
+            (item parameter " "))))
+      
+      (subsection
+        (title "Ada compiler configuration")
+        (table install_config
+          (t-row
+            (item "Configuration file")
+            (item "Description")
+            (item "Default value"))
+          (t-row
+            (item file_name "conf-adacomp")
+            (item "Ada compiler used to compile Ada code to object files")
+            (item command "gcc"))
+          (t-row
+            (item file_name "conf-adabind")
+            (item "Ada binder used to bind Ada library files")
+            (item command "gnatbind"))
+          (t-row
+            (item file_name "conf-adalink")
+            (item "Ada linker used to produce executables")
+            (item command "gnatlink"))
+          (t-row
+            (item file_name "conf-adacflags")
+            (item "Optional flags passed to Ada compiler")
+            (item parameter "-O2 -g -fstack-check -gnatwaleF -gnatVa -gnato"))
+          (t-row
+            (item file_name "conf-adabflags")
+            (item "Optional flags passed to Ada binder")
+            (item parameter " "))
+          (t-row
+            (item file_name "conf-adaldflags")
+            (item "Optional flags passed to Ada linker")
+            (item parameter " ")))))
+
+  ; compilation requirements
+
+  (subsection
+    (title "Requirements")
+
+    
+    (para "The package requires an Ada 2005" (footnote
+      (link-ext "http://adaic.org/standards/05rm/html/RM-TTL.html"))
+      " compatible compiler to compile.")
+
+    (para "The package requires a C90" (footnote (link-ext
+    "http://www.open-std.org/jtc1/sc22/wg14/")) " compiler and a POSIX"
+    (footnote (link-ext "http://www.opengroup.org/")) " environment to
+      compile. The package is expected to be usable in a non-POSIX
+      environment, but is not currently tested extensively in one.")
+
+    (include "pkg-install-req.ud"))
+
+  ; compilation instructions
+
+  (subsection
+    (title "Compilation")
+    (para "The package is compiled with the following commands: ")
+
+    (para-verbatim example
+"make
+make tests")
+
+    (para "The first " (item command "make") " command compiles the
+    object code itself. The second command runs the test suite - any
+    errors here signal incorrect package behaviour."))
+
+  (subsection
+    (title "Installation")
+
+    (para "A 'dry run' install can be performed that will not actually
+      install any files, to see what will be installed:")
+    (para-verbatim example
+"make install-dryrun")
+    (para "It is highly recommended that you remove previous installations
+      before installing.")
+
+    (para "The package is installed with the following commands: ")
+    (para-verbatim example
+"make install
+make install-check")
+    (para "The first " (item command "make") " command installs all
+    relevant files. The second command checks that all files were
+    installed correctly.")
+
+    (para "The package can be uninstalled at a later date with:")
+    (para-verbatim example
+"make deinstall"))
+
+  (subsection
+    (title "Fake root")
+    (para "The package can be installed into a \"fake root\" directory
+      suitable for operating system package building. Essentially, all
+      programs will believe that they have been installed into the paths
+      specified in the various configuration files but their locations
+      will actually be prefixed with the value specfied as the fake root.")
+    (para "If the " (item file_name "conf-fakeroot") " file is empty, no
+      fake root will be used."))
+
+  (subsection
+    (title "Example build with customisation")
+
+    (para-verbatim example
+"echo gcc44     > conf-cc
+echo gcc44     > conf-ld
+echo -O2 -g -W > conf-cflags
+echo gcc44     > conf-adacomp
+echo gnatlink  > conf-adalink
+echo gnatbind  > conf-adabind
+
+echo /custom/bin > conf-bindir
+echo /custom/lib/jack-ada         > conf-dlibdir
+echo /custom/lib/jack-ada-static  > conf-slibdir
+echo /custom/include/jack-ada     > conf-incdir
+echo /custom/share/jack-ada-repos > conf-repos
+echo > conf-fakeroot
+
+make
+make tests
+make install install-check"))
+)

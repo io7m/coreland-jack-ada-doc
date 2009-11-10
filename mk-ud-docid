@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]
+then
+  echo "mk-ud-docid: usage: file" 1>&2
+  exit 111
+fi
+
+printf '(item docid "%s")\n' `head -n 1 "$1"` || exit 1

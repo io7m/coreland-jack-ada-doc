@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ $# -ne 2 ]
+then
+  echo "mk-txt-footer: usage: site-file title-file" 1>&2
+  exit 111
+fi
+
+site=`head -n 1 "$1"` || exit 1
+title=`head -n 1 "$2"` || exit 1
+cat <<EOF
+------------------------------------------------------------------------------
+http://${site}/doc - ${title}
+
+EOF

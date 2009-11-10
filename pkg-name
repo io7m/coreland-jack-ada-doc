@@ -1,0 +1,2 @@
+#!/bin/sh
+awk '{printf "%s-doc-%s\n",$1,$2}' < "$1"

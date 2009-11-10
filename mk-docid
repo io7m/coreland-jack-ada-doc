@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]
+then
+  echo "mk-docid: usage: file" 1>&2
+  exit 111
+fi
+
+prefix="`head -n 1 $1`" || exit 1
+echo | tai64 | sed "s/@/${prefix}/" | sed 's/ *//g' | tr [:lower:] [:upper:] || exit 1

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ $# -ne 2 ]
+then
+  echo "mk-ud-title: usage: meta/pkg meta/title" 1>&2
+  exit 111
+fi
+
+pkg="`head -n 1 $1`"   || exit 1
+title="`head -n 1 $2`" || exit 1
+
+printf '%s %s' "${pkg}" "${title}" || exit 1

@@ -1,0 +1,10 @@
+(section
+  (title "Orientation")
+
+  (subsection
+    (title "Overview")
+
+    (para "The " (item package "jack-ada") " package provides a set of bindings
+      to the " (link-ext "http://jackaudio.org" "Jack Audio Connection Kit") "."))
+
+) ; end of section
