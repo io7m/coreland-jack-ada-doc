@@ -83,6 +83,12 @@ table.package_deps td {
   padding-right: 3em;
 }
 
+table.procedure_map { }
+table.procedure_map td {
+  vertical-align: top;
+  padding-right: 3em;
+}
+
 table.supported { }
 table.supported td {
   vertical-align: top;

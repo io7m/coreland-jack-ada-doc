@@ -1,0 +1,6 @@
+(section
+  (ref "jack_client")
+  (title "Jack.Client API reference")
+
+  (include "a-jack-client-open.ud")
+)

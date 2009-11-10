@@ -7,4 +7,7 @@
     (title "Subprogram map")
     (para "The following table shows the mapping between the Ada subprograms
       and the original C API.")
-    (include "m_proc_map.ud")))
+    (include "m_proc_map.ud"))
+
+  (include "a-jack-client.ud")
+)

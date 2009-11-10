@@ -1,0 +1,17 @@
+(style "main")
+(encoding "utf-8")
+(render-header "header")
+(render-footer "footer")
+
+(include "m_title.ud")
+
+(para (include "m_docid.ud"))
+(para (include "m_pubdate.ud"))
+
+(para abstract
+  "Documentation for " (include "m_pkg.ud") ".")
+
+(contents)
+
+(include "pkg.ud")
+(include "a-jack.ud")
