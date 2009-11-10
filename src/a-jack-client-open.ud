@@ -1,5 +1,26 @@
 (section
   (ref "jack_client_open")
-  (ref "jack_client_open_with_server")
   (title "Jack.Client.Open")
-)
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+procedure Open
+  (Client_Name : in     String;
+   Options     : in     Options_t;
+   Client      :    out Client_t;
+   Status      : in out Status_t);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Open") " procedure opens an external
+      client session with a JACK server. The procedure returns "
+      (item constant "Invalid_Client") " on failure and sets "
+      (item parameter "Status.Failure") " to " (item constant "True") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Open") " procedure is equivalent to "
+      (item c_function "jack_client_open") ".")))

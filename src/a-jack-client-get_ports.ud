@@ -1,0 +1,27 @@
+(section
+  (ref "jack_client_get_ports")
+  (title "Jack.Client.Get_Ports")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+procedure Get_Ports
+  (Client            : in     Client_t;
+   Port_Name_Pattern : in     String;
+   Port_Type_Pattern : in     String;
+   Port_Flags        : in     Port_Flags_t;
+   Ports             :    out Port_Name_Set_t);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Get_Ports") " procedure returns an ordered
+      set of the available ports matching " (item parameter "Port_Name_Pattern")
+      ", " (item parameter "Port_Type_Pattern") " and/or "
+      (item parameter "Port_Flags") " in " (item parameter "Ports") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Get_Ports") " procedure is equivalent to "
+      (item c_function "jack_get_ports") ".")))

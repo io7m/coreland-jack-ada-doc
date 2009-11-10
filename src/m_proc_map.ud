@@ -1,5 +1,7 @@
 (table procedure_map
   (t-row (item "Jack C API") (item "Ada equivalent"))
+(t-row (item "jack_activate")(item (link "jack_client_activate" "Jack.Client.Activate")))
 (t-row (item "jack_client_open")(item (link "jack_client_open" "Jack.Client.Open")))
-(t-row (item "jack_client_open")(item (link "jack_client_open_with_server" "Jack.Client.Open_With_Server")))
+(t-row (item "jack_get_ports")(item (link "jack_client_get_ports" "Jack.Client.Get_Ports")))
+(t-row (item "jack_port_register")(item (link "jack_client_port_register" "Jack.Client.Port_Register")))
 )
