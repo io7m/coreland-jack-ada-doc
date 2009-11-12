@@ -6,6 +6,8 @@
 (t-row (item "jack_connect")(item (link "jack_client_connect" "Jack.Client.Connect")))
 (t-row (item "jack_disconnect")(item (link "jack_client_disconnect" "Jack.Client.Disconnect")))
 (t-row (item "jack_get_ports")(item (link "jack_client_get_ports" "Jack.Client.Get_Ports")))
+(t-row (item "jack_port_connected")(item (link "jack_port_connected" "Jack.Port.Connected")))
+(t-row (item "jack_port_connected_to")(item (link "jack_port_connected_to" "Jack.Port.Connected_To")))
 (t-row (item "jack_port_flags")(item (link "jack_port_flags" "Jack.Port.Flags")))
 (t-row (item "jack_port_get_buffer")(item (link "jack_port_buffer_address" "Jack.Port.Buffer_Address")))
 (t-row (item "jack_port_is_mine")(item (link "jack_client_port_is_mine" "Jack.Client.Port_Is_Mine")))

@@ -1,0 +1,21 @@
+(section
+  (ref "jack_port_connected")
+  (title "Jack.Port.Connected")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Jack.Port;
+with Jack.Client;
+
+function Connected (Port : in Jack.Client.Port_t) return Boolean;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Connected") " function returns "
+      (item constant "True") " if " (item parameter "Port") " is connected."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_function "Connected") " function is equivalent to "
+      (item c_function "jack_port_connected") ".")))
