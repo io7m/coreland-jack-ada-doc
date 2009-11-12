@@ -9,7 +9,7 @@
 procedure Open
   (Client_Name : in     String;
    Options     : in     Options_t;
-   Client      :    out Client_t;
+   Client      :    out Jack.Client.Client_t;
    Status      : in out Status_t);
 "))
   (subsection

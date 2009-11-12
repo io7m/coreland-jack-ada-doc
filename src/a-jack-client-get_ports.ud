@@ -7,10 +7,10 @@
 "with Jack.Client;
 
 procedure Get_Ports
-  (Client            : in     Client_t;
+  (Client            : in     Jack.Client.Client_t;
    Port_Name_Pattern : in     String;
    Port_Type_Pattern : in     String;
-   Port_Flags        : in     Port_Flags_t;
+   Port_Flags        : in     Jack.Client.Port_Flags_t;
    Ports             :    out Port_Name_Set_t);
 "))
   (subsection

@@ -7,8 +7,8 @@
 "with Jack.Client;
 
 function Port_Is_Mine
-  (Client : in Client_t;
-   Port   : in Port_t) return Boolean;
+  (Client : in Jack.Client.Client_t;
+   Port   : in Jack.Client.Port_t) return Boolean;
 "))
   (subsection
     (title "Description")

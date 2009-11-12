@@ -7,11 +7,11 @@
 "with Jack.Client;
 
 procedure Port_Register
-  (Client      : in     Client_t;
+  (Client      : in     Jack.Client.Client_t;
    Port        :    out Port_t;
-   Port_Name   : in     Port_Name_t;
-   Port_Type   : in     String;
-   Port_Flags  : in     Port_Flags_t;
+   Port_Name   : in     Jack.Client.Port_Name_t;
+   Port_Type   : in     Jack.Client.Port_Type_t;
+   Port_Flags  : in     Jack.Client.Port_Flags_t;
    Buffer_Size : in     Natural := 0);
 "))
   (subsection

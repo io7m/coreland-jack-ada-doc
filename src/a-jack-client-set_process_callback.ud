@@ -14,7 +14,7 @@ generic
      User_Data        : in User_Data_Access_Type);
                          
 procedure Set_Process_Callback
-  (Client    : in     Client_t;
+  (Client    : in     Jack.Client.Client_t;
    Process   : in     Process_Callback_t;
    User_Data : in     User_Data_Access_Type;
    Failed    :    out Boolean);

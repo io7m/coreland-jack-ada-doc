@@ -7,7 +7,7 @@
 "with Jack.Client;
 
 procedure Close
-  (Client : in     Client_t;
+  (Client : in     Jack.Client.Client_t;
    Failed :    out Boolean);
 "))
   (subsection

@@ -7,9 +7,9 @@
 "with Jack.Client;
 
 procedure Disconnect
-  (Client           : in     Client_t;
-   Source_Port      : in     Port_Name_t;
-   Destination_Port : in     Port_Name_t;
+  (Client           : in     Jack.Client.Client_t;
+   Source_Port      : in     Jack.Client.Port_Name_t;
+   Destination_Port : in     Jack.Client.Port_Name_t;
    Failed           :    out Boolean);
 "))
   (subsection
