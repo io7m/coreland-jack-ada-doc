@@ -8,7 +8,7 @@
 
 procedure Open
   (Client_Name : in     String;
-   Options     : in     Options_t;
+   Options     : in     Jack.Client.Options_t;
    Client      :    out Jack.Client.Client_t;
    Status      : in out Status_t);
 "))
