@@ -15,6 +15,7 @@
 (t-row (item "jack_port_is_mine")(item (link "jack_client_port_is_mine" "Jack.Client.Port_Is_Mine")))
 (t-row (item "jack_port_name")(item (link "jack_port_name" "Jack.Port.Name")))
 (t-row (item "jack_port_register")(item (link "jack_client_port_register" "Jack.Client.Port_Register")))
+(t-row (item "jack_port_set_latency")(item (link "jack_port_set_latency" "Jack.Port.Set_Latency")))
 (t-row (item "jack_port_short_name")(item (link "jack_port_short_name" "Jack.Port.Short_Name")))
 (t-row (item "jack_port_type")(item (link "jack_port_get_type" "Jack.Port.Get_Type")))
 (t-row (item "jack_set_process_callback")(item (link "jack_client_set_process_callback" "Jack.Client.Set_Process_Callback")))

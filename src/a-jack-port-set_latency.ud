@@ -1,0 +1,22 @@
+(section
+  (ref "jack_port_set_latency")
+  (title "Jack.Port.Set_Latency")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Port;
+
+procedure Set_Latency
+  (Port    : in Jack.Client.Port_t;
+   Latency : in Jack.Client.Number_Of_Frames_t);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Set_Latency") " procedure sets the
+      port latency for " (item variables "Port") ".")
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Set_Latency") " procedure is equivalent to "
+      (item c_procedure "jack_port_set_latency") "."))))
