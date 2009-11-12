@@ -1,0 +1,25 @@
+(section
+  (ref "jack_client_total_latency")
+  (ref "jack_port_get_total_latency")
+  (title "Jack.Client.Total_Latency")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Jack.Client;
+
+function Total_Latency
+  (Client : in Jack.Client.Client_t;
+   Port   : in Jack.Client.Port_t) return Jack.Client.Number_Of_Frames_t;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Total_Latency") " function returns the 
+      maximum of the sum of the latencies in every connection path that can be
+      drawn between the port and other ports with the " (item constant "Terminal")
+      " flag set."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_function "Total_Latency") " function is equivalent to "
+      (item c_function "jack_port_get_total_latency") ".")))
