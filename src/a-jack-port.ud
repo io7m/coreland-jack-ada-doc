@@ -4,6 +4,7 @@
   (contents)
 
   (include "a-jack-port-buffer_address.ud")
+  (include "a-jack-port-flags.ud")
   (include "a-jack-port-name.ud")
   (include "a-jack-port-short_name.ud")
 )

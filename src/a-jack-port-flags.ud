@@ -1,0 +1,20 @@
+(section
+  (ref "jack_port_flags")
+  (title "Jack.Port.Flags")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Jack.Port;
+
+function Flags (Port : in Client.Port_t) return Client.Port_Flags_t;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Flags") " function retrieves the
+      port flags for " (item variables "Port") ".")
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_function "Flags") " function is equivalent to "
+      (item c_function "jack_port_flags") "."))))
