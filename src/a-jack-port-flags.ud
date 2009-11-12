@@ -6,7 +6,7 @@
     (para-verbatim function_synopsis
 "with Jack.Port;
 
-function Flags (Port : in Client.Port_t) return Client.Port_Flags_t;
+function Flags (Port : in Jack.Client.Port_t) return Jack.Client.Port_Flags_t;
 "))
   (subsection
     (title "Description")
