@@ -1,0 +1,10 @@
+(section
+  (title "Usage")
+  (contents)
+
+  (para "This section attempts to informally document the usage of the JACK
+    bindings. It only really attempts to detail the parts that are unique
+    to the Ada bindings - it is not a replacement for the mountains of
+    tutorial material available for the C library.")
+
+  (include "u-simple_client.ud"))

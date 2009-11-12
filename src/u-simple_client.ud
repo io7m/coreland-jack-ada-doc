@@ -1,0 +1,3 @@
+(section
+  (title "A Simple JACK Client")
+  (para-verbatim example (render "simple_client.adb")))
