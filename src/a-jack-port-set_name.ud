@@ -5,6 +5,7 @@
     (title "Synopsis")
     (para-verbatim procedure_synopsis
 "with Jack.Port;
+with Jack.Client;
 
 procedure Set_Name
   (Port      : in     Jack.Client.Port_t;
