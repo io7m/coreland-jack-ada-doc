@@ -3,7 +3,7 @@
   (title "Jack.Port.Short_Name")
   (subsection
     (title "Synopsis")
-    (para-verbatim procedure_synopsis
+    (para-verbatim function_synopsis
 "with Jack.Port;
 
 function Short_Name (Port : in Jack.Client.Port_t) return Jack.Client.Port_Name_t;
@@ -11,10 +11,10 @@ function Short_Name (Port : in Jack.Client.Port_t) return Jack.Client.Port_Name_
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Short_Name") " procedure retrieves the
+      "The " (item ada_function "Short_Name") " function retrieves the
       short name of " (item variables "Port") ".")
   (subsection
     (title "Mapping")
     (para
-      "The " (item ada_procedure "Short_Name") " procedure is equivalent to "
+      "The " (item ada_function "Short_Name") " function is equivalent to "
       (item c_function "jack_port_short_name") "."))))

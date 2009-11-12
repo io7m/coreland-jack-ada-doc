@@ -3,7 +3,7 @@
   (title "Jack.Port.Name")
   (subsection
     (title "Synopsis")
-    (para-verbatim procedure_synopsis
+    (para-verbatim function_synopsis
 "with Jack.Port;
 
 function Name (Port : in Jack.Client.Port_t) return Jack.Client.Port_Name_t;
@@ -11,10 +11,10 @@ function Name (Port : in Jack.Client.Port_t) return Jack.Client.Port_Name_t;
   (subsection
     (title "Description")
     (para
-      "The " (item ada_procedure "Name") " procedure retrieves the
+      "The " (item ada_function "Name") " function retrieves the
       name of " (item variables "Port") ".")
   (subsection
     (title "Mapping")
     (para
-      "The " (item ada_procedure "Name") " procedure is equivalent to "
+      "The " (item ada_function "Name") " function is equivalent to "
       (item c_function "jack_port_name") "."))))
