@@ -1,0 +1,23 @@
+(section
+  (ref "jack_client_deactivate")
+  (title "Jack.Client.Deactivate")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+procedure Deactivate
+  (Client : in     Jack.Client.Client_t;
+   Failed :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Deactivate") " procedure tells the server to
+      remove this client from the process graph. On failure, the procedure
+      sets " (item parameter "Failed") " to " (item constant "True") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Deactivate") " procedure is equivalent to "
+      (item c_function "jack_client_deactivate") ".")))
