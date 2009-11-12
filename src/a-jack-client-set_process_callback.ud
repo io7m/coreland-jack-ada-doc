@@ -10,7 +10,7 @@ generic
   type User_Data_Type is private;
   type User_Data_Access_Type is access User_Data_Type;
   type Process_Callback_t is not null access procedure
-    (Number_Of_Frames : in Number_Of_Frames_t;
+    (Number_Of_Frames : in Jack.Client.Number_Of_Frames_t;
      User_Data        : in User_Data_Access_Type);
                          
 procedure Set_Process_Callback
