@@ -11,6 +11,8 @@
   (include "a-jack-client-open.ud")
   (include "a-jack-client-port_is_mine.ud")
   (include "a-jack-client-port_register.ud")
+  (include "a-jack-client-recompute_total_latencies.ud")
+  (include "a-jack-client-recompute_total_latency.ud")
   (include "a-jack-client-set_process_callback.ud")
   (include "a-jack-client-total_latency.ud")
 )

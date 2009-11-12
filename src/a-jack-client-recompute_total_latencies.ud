@@ -1,0 +1,24 @@
+(section
+  (ref "jack_client_recompute_total_latencies")
+  (ref "jack_recompute_total_latencies")
+  (title "Jack.Client.Recompute_Total_Latencies")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+procedure Recompute_Total_Latencies
+  (Client : in     Jack.Client.Client_t;
+   Failed :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Recompute_Total_Latencies") " procedure requests
+      a complete recomputation of all port latencies. On failure, the procedure
+      sets " (item parameter "Failed") " to " (item constant "True") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Recompute_Total_Latencies") " procedure is equivalent to "
+      (item c_function "jack_recompute_total_latencies") ".")))
