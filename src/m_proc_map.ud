@@ -8,6 +8,7 @@
 (t-row (item "jack_get_ports")(item (link "jack_client_get_ports" "Jack.Client.Get_Ports")))
 (t-row (item "jack_port_flags")(item (link "jack_port_flags" "Jack.Port.Flags")))
 (t-row (item "jack_port_get_buffer")(item (link "jack_port_buffer_address" "Jack.Port.Buffer_Address")))
+(t-row (item "jack_port_is_mine")(item (link "jack_client_port_is_mine" "Jack.Client.Port_Is_Mine")))
 (t-row (item "jack_port_name")(item (link "jack_port_name" "Jack.Port.Name")))
 (t-row (item "jack_port_register")(item (link "jack_client_port_register" "Jack.Client.Port_Register")))
 (t-row (item "jack_port_short_name")(item (link "jack_port_short_name" "Jack.Port.Short_Name")))

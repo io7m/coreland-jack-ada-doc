@@ -1,0 +1,22 @@
+(section
+  (ref "jack_client_port_is_mine")
+  (title "Jack.Client.Port_Is_Mine")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Jack.Client;
+
+function Port_Is_Mine
+  (Client : in Client_t;
+   Port   : in Port_t) return Boolean;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Port_Is_Mine") " returns " (item constant "True")
+      " if " (item parameter "Port") " belongs to " (item parameter "Client") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_function "Port_Is_Mine") " function is equivalent to "
+      (item c_function "jack_client_port_is_mine") ".")))
