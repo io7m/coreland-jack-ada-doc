@@ -1,0 +1,23 @@
+(section
+  (ref "jack_port_set_name")
+  (title "Jack.Port.Set_Name")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Port;
+
+procedure Set_Name
+  (Port      : in     Jack.Client.Port_t;
+   Port_Name : in     Jack.Client.Port_Name_t;
+   Failed    :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Set_Name") " procedure sets the
+      port name for " (item variables "Port") ".")
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Set_Name") " procedure is equivalent to "
+      (item c_procedure "jack_port_set_name") "."))))

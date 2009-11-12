@@ -11,5 +11,6 @@
   (include "a-jack-port-latency.ud")
   (include "a-jack-port-name.ud")
   (include "a-jack-port-set_latency.ud")
+  (include "a-jack-port-set_name.ud")
   (include "a-jack-port-short_name.ud")
 )
