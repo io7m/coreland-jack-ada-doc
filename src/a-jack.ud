@@ -10,4 +10,5 @@
     (include "m_proc_map.ud"))
 
   (include "a-jack-client.ud")
+  (include "a-jack-port.ud")
 )

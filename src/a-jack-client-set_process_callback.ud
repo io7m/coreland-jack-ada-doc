@@ -1,0 +1,33 @@
+(section
+  (ref "jack_client_set_process_callback")
+  (title "Jack.Client.Set_Process_Callback")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"with Jack.Client;
+
+generic
+  type User_Data_Type is private;
+  type User_Data_Access_Type is access User_Data_Type;
+  type Process_Callback_t is not null access procedure
+    (Number_Of_Frames : in Number_Of_Frames_t;
+     User_Data        : in User_Data_Access_Type);
+                         
+procedure Set_Process_Callback
+  (Client    : in     Client_t;
+   Process   : in     Process_Callback_t;
+   User_Data : in     User_Data_Access_Type;
+   Failed    :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Set_Process_Callback") " procedure 
+      instructs the server to call " (item parameter "Process") " whenever
+      there is processing to be done. On failure, the procedure
+      sets " (item parameter "Failed") " to " (item constant "True") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_procedure "Set_Process_Callback") " procedure is equivalent to "
+      (item c_function "jack_set_process_callback") ".")))

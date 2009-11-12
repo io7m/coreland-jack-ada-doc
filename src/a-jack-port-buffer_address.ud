@@ -1,0 +1,24 @@
+(section
+  (ref "jack_port_buffer_address")
+  (title "Jack.Port.Buffer_Address")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Jack.Client;
+with Jack.Port;
+with System;
+
+function Buffer_Address
+  (Port             : in Jack.Client.Port_t;
+   Number_Of_Frames : in Jack.Client.Number_Of_Frames_t) return System.Address;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Buffer_Address") " function retrieves the
+      address of the sample buffer from " (item parameter "Port") "."))
+  (subsection
+    (title "Mapping")
+    (para
+      "The " (item ada_function "Buffer_Address") " function is equivalent to "
+      (item c_function "jack_port_get_buffer") ".")))
