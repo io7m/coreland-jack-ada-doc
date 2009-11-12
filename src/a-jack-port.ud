@@ -8,6 +8,7 @@
   (include "a-jack-port-connected_to.ud")
   (include "a-jack-port-flags.ud")
   (include "a-jack-port-get_type.ud")
+  (include "a-jack-port-latency.ud")
   (include "a-jack-port-name.ud")
   (include "a-jack-port-short_name.ud")
 )

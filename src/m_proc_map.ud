@@ -10,6 +10,8 @@
 (t-row (item "jack_port_connected_to")(item (link "jack_port_connected_to" "Jack.Port.Connected_To")))
 (t-row (item "jack_port_flags")(item (link "jack_port_flags" "Jack.Port.Flags")))
 (t-row (item "jack_port_get_buffer")(item (link "jack_port_buffer_address" "Jack.Port.Buffer_Address")))
+(t-row (item "jack_port_get_latency")(item (link "jack_port_latency" "Jack.Port.Latency")))
+(t-row (item "jack_port_get_total_latency")(item (link "jack_client_total_latency" "Jack.Client.Total_Latency")))
 (t-row (item "jack_port_is_mine")(item (link "jack_client_port_is_mine" "Jack.Client.Port_Is_Mine")))
 (t-row (item "jack_port_name")(item (link "jack_port_name" "Jack.Port.Name")))
 (t-row (item "jack_port_register")(item (link "jack_client_port_register" "Jack.Client.Port_Register")))
