@@ -8,8 +8,8 @@
 with Jack.Client;
 
 function Connected_To
-  (Port      : in Client.Port_t;
-   Port_Name : in Client.Port_Name_t) return Boolean;
+  (Port      : in Jack.Client.Port_t;
+   Port_Name : in Jack.Client.Port_Name_t) return Boolean;
 "))
   (subsection
     (title "Description")
